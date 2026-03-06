@@ -48,6 +48,6 @@ public class Carro {
         if (chave.getMontadora() != this.montadora) {
             return new CarroStatus("Não é possível ligar o carro.");
         }
-        return new CarroStatus("Carro ligado.");
+        return new CarroStatus("Carro ligado. " + motor);
     }
 }

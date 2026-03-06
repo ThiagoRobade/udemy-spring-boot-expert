@@ -26,22 +26,22 @@ public class ArquiteturaSpringApplication {
         ConfigurableApplicationContext applicationContext = builder.context();
 
         // Recupera manualmente um Bean (objeto) do Spring pelo seu ID/Nome.
-        var produtoRepository = applicationContext.getBean("produtoRepository");
+        //var produtoRepository = applicationContext.getBean("produtoRepository");
 
         // Define programaticamente o Profile (perfil) ativo como "producao".
         builder.profiles("producao");
 
         // Injeta uma propriedade de configuração diretamente via código (sobrescreve arquivos .properties).
-        builder.properties("spring.datasource.url=jdbc://");
+        //builder.properties("spring.datasource.url=jdbc://");
 
         // Inicia a aplicação de fato, processando os argumentos de linha de comando.
         builder.run(args);
 
         // Acessa o ambiente da aplicação (Environment) para ler propriedades e variáveis.
-        ConfigurableEnvironment environment = applicationContext.getEnvironment();
+        //ConfigurableEnvironment environment = applicationContext.getEnvironment();
 
         // Busca o valor da chave "spring.application.name" definida nas configurações do projeto.
-        String applicationName = environment.getProperty("spring.application.name");
+        //String applicationName = environment.getProperty("spring.application.name");
     }
 
 }
